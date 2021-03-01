@@ -1,0 +1,108 @@
+if not game:IsLoaded() then
+	local loadedcheck = Instance.new("Message",workspace)
+	loadedcheck.Text = 'Loading...'
+	game.Loaded:Wait()
+	loadedcheck:Destroy()
+end
+
+game.Players.LocalPlayer.PlayerGui.HUD.Bottom.SP.Visible = true
+game.Players.LocalPlayer.PlayerGui.HUD.Bottom.SP.Text = ("Auto Broly Made by: NotAll4n")
+local Earth = 536102540
+local Queue = 3565304751
+local Broly = 2050207304
+if _G.earth == true and game.PlaceId == Queue then
+    game.GetService("TeleportService")Teleport(Earth, LocalPlayer)
+elseif _G.earth == true and game.PlaceId == Earth then 
+game.Players.LocalPlayer.Character.PowerOutput:Destroy()
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000, 0)
+wait(.1)
+game.Players.LocalPlayer.Character.LowerTorso.Root:Destroy()
+wait(0.1)
+local plr = game:GetService("Players").LocalPlayer
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2751.67725, 3944.85986, -2272.62622)
+wait(0.1)
+plr.Character.HumanoidRootPart.Anchored = true
+elseif _G.queue == true and game.PlaceId == Queue then
+    game.Players.LocalPlayer.Character:WaitForChild("PowerOutput"):Destroy()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000, 0)
+    wait(.25)
+    game.Players.LocalPlayer.Character.LowerTorso.Root:Destroy()
+    wait(.25)
+    local pad = math.random(1,7)
+    if pad == 1 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.1189117, 238.054794, -147.576416)
+    elseif pad == 2 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24.060957, 238.054794, -291.920319)
+    elseif pad == 3 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.8643761, 238.054794, -423.684021)
+    elseif pad == 4 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-27.0333195, 238.054794, -591.398315)
+    elseif pad == 5 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25.6867237, 238.054794, -731.384155)
+    elseif pad == 6 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.5732059, 238.054794, -883.950989)
+    elseif pad == 7 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28.3717651, 238.054794, -1049.88049)
+    end
+
+elseif game.PlaceId == Broly then
+    game.Workspace:WaitForChild("Live")
+wait(1)
+game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("h")
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["Dragon Throw"])
+wait(.3)
+game.Players.LocalPlayer.Character["Dragon Throw"].Activator.Flip:Destroy()
+wait(.3)
+local target = game.Workspace.Live["Broly BR"]
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.9920025, -121.514946, -17.1752338)
+game.Players.LocalPlayer.Character["Dragon Throw"]:Activate() 
+end
+
+wait(1.5)
+
+_G.toggle = true
+
+while _G.toggle do
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack[Move1])
+game.Players.LocalPlayer.Character[Move1]:Activate()
+wait()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack[Move2])
+game.Players.LocalPlayer.Character[Move2]:Activate()
+wait()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack[Move3])
+game.Players.LocalPlayer.Character[Move3]:Activate()
+wait()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack[Move4])
+game.Players.LocalPlayer.Character[Move4]:Activate()
+wait()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack[Move5])
+game.Players.LocalPlayer.Character[Move5]:Activate()
+wait()
+
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v.Name == "Attacking" then
+v:Destroy()
+end
+if v.Name == "Action" then
+v:Destroy()
+end
+end
+if game.Players.LocalPlayer.Character.Ki.Value > 32 then
+_G.MoveSpam = true
+end
+if _G.MoveSpam then game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("mxcs")
+end
+if game.PlaceId == Broly then game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("mxcs")
+end
+if game.Players.LocalPlayer.Character.Humanoid.Health <= 35 or game.Players.LocalPlayer.Character.Humanoid.Health <= 25 or game.Players.LocalPlayer.Character.Humanoid.Health <= 15 then
+           game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("h")
+end
+if game.Workspace.Live["Broly BR"].Humanoid.Health == 0 or game.Workspace.Live["Broly BR"].Humanoid == nil or game.Players.LocalPlayer.Character.Humanoid.Health <= 5 then
+    game:GetService("TeleportService"):Teleport(Location, LocalPlayer)
+end
+end
+ if game.Players.LocalPlayer.Character.Humanoid.Health <= 0 then
+    game.GetService("TeleportService")Teleport(Location, LocalPlayer)
+end
